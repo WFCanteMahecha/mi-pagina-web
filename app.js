@@ -1,4 +1,4 @@
-// Configura Firebase
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: "AIzaSyCtRbpONiRosp1DFROn--2ElK8SVclvQwY",
   authDomain: "webprueba-51c6c.firebaseapp.com",
@@ -8,9 +8,10 @@ const firebaseConfig = {
   appId: "1:23038917466:web:8ca941e3b99fa318109163",
   measurementId: "G-QW7TEGK5H9"
 };
-// Inicializa Firebase
-const app = firebase.initializeApp(firebaseConfig);
-const auth = firebase.auth();
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
 
 // Manejo de sesión en `index.html` para login
 document.getElementById('login-form')?.addEventListener('submit', function(event) {
